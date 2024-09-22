@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "builds": [{ "src": "Dockerfile", "use": "@vercel/docker" }],
+  "builds": [
+    { "src": "src/app/api/removeBackground/route.js", "use": "@vercel/node" }
+  ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/src/app/api/$1" },
-    { "src": "/(.*)", "dest": "/src/app/page.js" }
+    { "src": "/api/(.*)", "dest": "/src/app/api/removeBackground/route.js" },
+    { "src": "/(.*)", "dest": "/src/app/page.js" },
+    { "src": "/(.*)", "dest": "/src/app/layout.js" }
   ]
 }
