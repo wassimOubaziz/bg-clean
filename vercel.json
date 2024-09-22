@@ -4,8 +4,10 @@
     { "src": "src/app/api/removeBackground/route.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "/src/app/api/removeBackground/route.js" },
-    { "src": "/(.*)", "dest": "/src/app/page.js" },
-    { "src": "/(.*)", "dest": "/src/app/layout.js" }
+    {
+      "src": "/api/removeBackground",
+      "dest": "/src/app/api/removeBackground/route.js"
+    },
+    { "src": "/(.*)", "dest": "/src/app/page.js" }
   ]
 }
